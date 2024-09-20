@@ -1,16 +1,16 @@
+import React,{useEffect} from 'react';
+import axios from 'axios';
+import { ACCESS_KEY } from './config/constants';
 
-
-function App() {
+const App = () => {
+  useEffect(()=>{
+   axios.get('https://api.unsplash.com/photos/?client_id=${ACCESS_KEY}&per_page=30');
+  },[]);
   return (
     <div>
-      
-        <p>
-         Tyson
-        </p>
-      
-      
+      Hi
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
